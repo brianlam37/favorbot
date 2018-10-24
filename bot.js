@@ -1,8 +1,8 @@
+
 //Include modules
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
-prefix = '~';
 const sqlite3 = require('sqlite3').verbose();
 
 const client = new Discord.Client();
@@ -18,7 +18,7 @@ let db = new sqlite3.Database('./debts.db');
 //Tell's me the bot is up
 client.on('ready', () => {
     console.log('Ready!');
-    db.run("CREATE TABLE IF NOT EXISTS debts (userId INTEGER, guildId INTEGER, debtorId INTEGER, reason TEXT)");
+    db.run("CREATE TABLE IF NOT EXISTS debts (debtID INTEGER PRIMARY KEY, UuserId TEXT,LuserId TEXT, UguildId TEXT, LguildId TEXT, UdebtorId TEXT, LdebtorId TEXT, reason TEXT)");
     console.log('Table Made!')
 });
 
