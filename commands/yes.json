@@ -1,4 +1,5 @@
 
 {
-    "Yes": ["yes","yea","ye","y","yeah","ya"]
+    "Yes": ["yes","yea","ye","y","yeah","ya"],
+    "No": ["no","n","na"]
 }
